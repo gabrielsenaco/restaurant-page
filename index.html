@@ -1,11 +1,147 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Restaurant Page</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Volkhov:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css">
 </head>
+
 <body>
-<div id="content">Hello</div>
-<script type="text/javascript" src="main.js"></script>
+  
+  <header>
+
+    <img src="images/logo.png" />
+
+    <nav disabled>
+      <li id="show-nav" data-type="show"><i class="ti ti-menu-2"></i></li>
+      <li id="close-nav" data-type="close"><i class="ti ti-x"></i></li>
+      <li data-type="home" enabled>HOME</li>
+      <li data-type="menu">MENU</li>
+      <li data-type="contact">CONTACT</li>
+      <a class="author-link" href="https://github.com/gabesenacom" target="_blank">
+        <i class="ti ti-brand-github"></i>
+
+        gabesenacom</a>
+    </nav>
+
+    <a class="author-link" href="https://github.com/gabesenacom" target="_blank">
+      <i class="ti ti-brand-github"></i>
+
+      gabesenacom</a>
+  </header>
+
+
+  <section id="home">
+    <h2>O primeiro restaurante que irá tocar o seu paladar de forma
+      inesquecível.</h2>
+    <p>Com nossa turma de chef’s e nossos melhores pratos, iremos oferecer o
+      melhor de nossos serviços para garantir um bom atendimento e,
+      principalmente, uma comida inesquecível.</p>
+    <p class="desktop">Deslize o mouse ou clique no menu de navegação
+      conhecer-nós melhor.
+      Estamos te esperando!</p>
+    <p class="mobile">Deslize o dedo ou clique no menu de navegação
+      conhecer-nós melhor. Estamos te esperando!</p>
+    <i class="ti ti-chevron-down" id="next-button"></i>
+  </section>
+
+  <section id="menu">
+    <div class="text-div">
+      <h2>Nosso Menu</h2>
+      <p>Escolha o mais puro e magnífico prato que acenda seu paladar.</p>
+      <p>Depois, só
+        entrar em contato conosco!</p>
+    </div>
+    <div id="foods-menu">
+      <figure class="food-card">
+        <img src="images/foods/food-1.png" />
+        <figcaption>
+          <h5 class="food-label">NAME:</h5>
+          <p class="food-text">Special food</p>
+          <h5 class="food-label">FOR:</h5>
+          <p class="food-text">3 PERSONS</p>
+          <h5 class="food-label">PRICE:</h5>
+          <p class="food-text">R$50,00</p>
+        </figcaption>
+      </figure>
+      <figure class="food-card">
+        <img src="images/foods/food-1.png" />
+        <figcaption>
+          <h5 class="food-label">NAME:</h5>
+          <p class="food-text">Special food</p>
+          <h5 class="food-label">FOR:</h5>
+          <p class="food-text">3 PERSONS</p>
+          <h5 class="food-label">PRICE:</h5>
+          <p class="food-text">R$50,00</p>
+        </figcaption>
+      </figure>
+      <figure class="food-card">
+        <img src="images/foods/food-1.png" />
+        <figcaption>
+          <h5 class="food-label">NAME:</h5>
+          <p class="food-text">Special food</p>
+          <h5 class="food-label">FOR:</h5>
+          <p class="food-text">3 PERSONS</p>
+          <h5 class="food-label">PRICE:</h5>
+          <p class="food-text">R$50,00</p>
+        </figcaption>
+      </figure>
+      <figure class="food-card">
+        <img src="images/foods/food-1.png" />
+        <figcaption>
+          <h5 class="food-label">NAME:</h5>
+          <p class="food-text">Special food</p>
+          <h5 class="food-label">FOR:</h5>
+          <p class="food-text">3 PERSONS</p>
+          <h5 class="food-label">PRICE:</h5>
+          <p class="food-text">R$50,00</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="text-div">
+      <h2>Entre em Contato</h2>
+      <p>Já escolheu seu prato e agora não vê a hora de comer? Tudo bem, temos
+        soluções fáceis e rápidas para você fazer seu pedido:</p>
+      <p>Se você quiser enviar aqui e agora mesmo, use nosso formulário que
+        você acha nesta página.
+      </p>
+      <p>Se prefere outros contatos:</p>
+      <p>Número: 99999-9999</p>
+      <p>Email: mail@mail.mail</p>
+    </div>
+    <div class="form-div">
+      <h3>Formulário de Contato/Pedido</h3>
+      <p>Peça seu pedido por aqui ou envie sua dúvida.</p>
+      <form id="contact-form">
+        <label>
+          Seu nome
+        </label>
+        <input type="text" name="name" required />
+        <label>
+          Seu email
+        </label>
+        <input type="email" name="email" required />
+        <label>
+          Título da Mensagem
+        </label>
+        <input type="text" name="title" required />
+        <label>
+          Mensagem
+        </label>
+        <textarea name="message" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
