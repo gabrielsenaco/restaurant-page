@@ -1,19 +1,48 @@
-const createElement = (elementType, className, id, parent = undefined) => {
-  let element = document.createElement(elementType);
-  if(className != undefined) {
-    console.log("cls2 ", element["className"]);
-    element["className"] = className;
-    console.log("cls ", element["className"]);
-  }
-  if(className != undefined) {
-    console.log("cls2 ", element["id"]);
-    element["id"] = id;
-    console.log("cls ", element["id"]);
-  }
-  if(parent != undefined) {
-    parent.appendChild(element);
-  }
-  return element;
-}
+export default class Component {
 
-export {createElement as default};
+  createElement( elementType, className, id, textContent, parent, ...attributes ) {
+    let element = document.createElement( elementType );
+
+    for ( let x = 1; x <= 5; x++ ) {
+      let value = arguments[ x ];
+      if ( value == null )
+        continue;
+      if ( x >= 1 && x <= 3 ) {
+        let name = x == 1 ? "className" : x == 2 ? "id" : "textContent";
+        element[ name ] = value;
+        continue;
+      }
+
+      if ( x == 5 )
+        this.setAttributes( element, attributes );
+      else
+        parent.appendChild( element );
+
+    }
+
+    return element;
+  }
+
+  setAttributes( element, attributes ) {
+    for ( let x = 0; x < attributes.length; x++ ) {
+      let name = attributes[ x ][ 0 ];
+      let value = attributes[ x ][ 1 ];
+      value = value ? value : "";
+      if ( name != null )
+        element.setAttribute( name, value );
+    }
+  }
+
+  buildText(parent, tag, text, className = null) {
+    this.createElement( tag, className, null, text,
+        parent );
+  }
+
+  build() {
+    
+  }
+
+  destroy() {
+    
+  }
+}
