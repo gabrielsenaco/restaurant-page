@@ -96,4 +96,4 @@ class Menu extends Component {
   }
 }
 
-export default new Menu();
+export default new Menu("R$");
